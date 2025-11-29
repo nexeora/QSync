@@ -379,7 +379,7 @@ def load_config(config_path: str, visited_paths: set = None) -> dict:
                 loc = sitemap['loc']
                 if isinstance(loc, str):
                     raise ValueError(f"站点地图配置项 {sitemap} 中的loc键值 {loc} 不是列表格式")
-                sitemap_task = SitemapUpdateTask(sitemap['path'], loc)
+                sitemap_task = SitemapUpdateTask(sitemap['path'], loc, config.get('project_root', ''))
                 sitemap_tasks.append(sitemap_task)
                 
                 # 如果有target配置项，则添加到deduplicatable_files列表中
