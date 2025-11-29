@@ -11,9 +11,19 @@ qsync 是一个用于文件同步和服务器部署的工具。
 
 ## 安装
 
+由于本项目未上传到 PyPI，您需要通过以下方式安装：
+
+### 方法一：从 wheel 文件安装（推荐）
+从 [Releases](https://github.com/nexeora/QSync/releases) 页面下载最新版本的 wheel 文件（例如 `qsync-1.0.0-py3-none-any.whl`），然后执行安装命令：
 ```bash
-pip install qsync
+pip install qsync-1.0.0-py3-none-any.whl
 ```
+
+### 方法二：从源码安装（在本项目根目录下执行）（使用-e参数可以以开发模式安装）
+```bash
+pip install .
+```
+
 
 ## 使用方法
 
